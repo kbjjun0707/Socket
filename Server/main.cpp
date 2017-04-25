@@ -6,14 +6,14 @@ using namespace std;
 int main() {
 	jun::SocketServer m_Server;
 
+	// 에코 서버로 사용
 	while (m_Server.wait_accept() == 1) {
 		while (1) {
-			m_Server.input_data();
-			if (m_Server.send_data() != 1) {
+			if (m_Server.recv_data() != 1) {
 				m_Server.CLS_SCK();
 				break;
-			}
-			if (m_Server.recv_data() != 1) {
+			}			
+			if (m_Server.send_data() != 1) {
 				m_Server.CLS_SCK();
 				break;
 			}

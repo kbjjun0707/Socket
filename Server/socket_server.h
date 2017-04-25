@@ -1,9 +1,9 @@
-#ifndef SOCKETSERVER_H
-#define SOCKETSERVER_H
+#ifndef SOCKET_SERVER_H
+#define SOCKET_SERVER_H
 
 #include <winsock2.h>
 
-#define BUFSIZE 1024000
+#define BUFSIZE 512
 
 namespace jun {
 

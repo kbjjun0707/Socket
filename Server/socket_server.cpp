@@ -7,7 +7,7 @@
 #pragma warning(disable:4996)
 #pragma comment (lib, "ws2_32.lib")
 
-#define TCP_PORT 80
+#define SOCKET_PORT 80
 
 //소켓 함수 오류 출력 후 종료
 void jun::SocketServer::err_quit(char *msg) {
@@ -51,7 +51,7 @@ jun::SocketServer::SocketServer() {
 	//bind()
 	ZeroMemory(&serveraddr, sizeof(serveraddr));
 	serveraddr.sin_family = AF_INET;
-	serveraddr.sin_port = htons(TCP_PORT);						// 포트
+	serveraddr.sin_port = htons(SOCKET_PORT);						// 포트
 	serveraddr.sin_addr.s_addr = htonl(INADDR_ANY);
 	retval = bind(listen_sock, (SOCKADDR *)&serveraddr, sizeof(serveraddr));
 	if (retval == SOCKET_ERROR) err_quit("bind()");
@@ -97,7 +97,7 @@ int jun::SocketServer::input_data() {
 	// 데이터 입력
 	ZeroMemory(buf, sizeof(buf));
 	printf("\n[보낼 데이터]");
-	if (fgets(buf, BUFSIZE + 1, stdin) == NULL)
+	if (fgets(buf, BUFSIZE, stdin) == NULL)
 		return -1;
 
 	// '\n' 문자 제거
