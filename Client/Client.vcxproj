@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{66C7A584-53E3-4722-BCC2-4FF8228CBC97}</ProjectGuid>
+    <ProjectGuid>{2C3649B6-4826-49E2-9BB6-8143211B5851}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Server</RootNamespace>
+    <RootNamespace>Client</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -147,10 +147,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="socket_server.cpp" />
+    <ClCompile Include="socket_client.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="socket_server.h" />
+    <ClInclude Include="socket_client.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

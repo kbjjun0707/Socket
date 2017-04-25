@@ -18,12 +18,12 @@
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="socket_server.cpp">
+    <ClCompile Include="socket_client.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="socket_server.h">
+    <ClInclude Include="socket_client.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
